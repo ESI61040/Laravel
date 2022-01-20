@@ -25,7 +25,13 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $project = new Project;
+        $title = __("Crear proyecto");
+        $textButton = __("Crear");
+        $route = route("projects.store");
+        return view("projects.create",compact("title","textButton","route","project"));
+
+
     }
 
     /**
